@@ -111,13 +111,14 @@
             .trim()
             .split("\n")
             .map((row) => row.split(","));
+          const header = rows[0];
+          const dataRows = rows.slice(1);
+          dataRows.sort((a, b) => new Date(b[0]) - new Date(a[0]));
           const tbody = document.querySelector("#awardTable tbody");
           tbody.innerHTML = "";
-
-          for (let i = 1; i < rows.length; i++) {
-            // 跳过表头
+          for (const row of dataRows) {
             const tr = document.createElement("tr");
-            rows[i].forEach((cell) => {
+            row.forEach((cell) => {
               const td = document.createElement("td");
               td.textContent = cell.trim();
               tr.appendChild(td);
@@ -128,7 +129,6 @@
           console.error("加载 award.csv 失败：", err);
         }
       }
-
       loadCSV();
     </script>
   </body>
