@@ -1,0 +1,9 @@
+_site/
+.jekyll-cache/
+.sass-cache/
+.bundle/
+/vendor/
+node_modules/
+/output/
+.playwright-cli/
+.DS_Store

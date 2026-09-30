@@ -1,0 +1,47 @@
+title: "Tian-Shi Xie"
+name: "Tian-Shi Xie"
+url: "https://stonexieac.github.io"
+baseurl: ""
+repository: "StoneXieAC/StoneXieAC.github.io"
+locale: "en-US"
+site_theme: "default"
+timezone: Asia/Shanghai
+encoding: utf-8
+markdown: kramdown
+highlighter: rouge
+permalink: pretty
+include:
+  - _pages
+exclude:
+  - README.md
+  - LICENSE
+  - Gemfile
+  - Gemfile.lock
+  - .ruby-version
+  - .bundle
+  - vendor
+  - node_modules
+  - scripts
+  - output
+  - AGENTS.md
+  - cv
+  - pre
+  - .github
+  - .gitignore
+  - .jekyll-cache
+  - .sass-cache
+  - .playwright-cli
+plugins:
+  - jekyll-sitemap
+sass:
+  style: compressed
+  sourcemap: never
+  # Academic Pages still uses legacy Sass imports; keep dependency warnings quiet.
+  quiet_deps: true
+  silence_deprecations:
+    - import
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: single

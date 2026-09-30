@@ -1,0 +1,48 @@
+en:
+  language: English
+  html_lang: en
+  og_locale: en_US
+  home: /
+  title: Tian-Shi Xie
+  page_title: Tian-Shi Xie Homepage
+  about: About
+  education: Education
+  honors: Selected Honors
+  experience: Experience
+  internship: Internship
+  leadership: Campus
+  email: Email
+  contact: Contact and profiles
+  navigation: Main navigation
+  languages: Language
+  skip: Skip to content
+  portrait: Portrait of Tian-Shi Xie
+  powered_by: Powered by
+  theme: Theme
+  not_found: Page not found
+  not_found_description: The page you are looking for may have moved.
+  return_home: Return to the homepage
+zh:
+  language: 中文
+  html_lang: zh-CN
+  og_locale: zh_CN
+  home: /zh/
+  title: 谢天石
+  page_title: 谢天石主页
+  about: 关于我
+  education: 教育背景
+  honors: 精选荣誉
+  experience: 经历
+  internship: 实习
+  leadership: 校园
+  email: 邮箱
+  contact: 联系方式与个人账号
+  navigation: 主导航
+  languages: 语言
+  skip: 跳至正文
+  portrait: 谢天石的照片
+  powered_by: 基于
+  theme: 主题
+  not_found: 页面未找到
+  not_found_description: 你访问的页面可能已移动。
+  return_home: 返回主页

@@ -1,0 +1,116 @@
+# Only publish changes to personal information after the owner's confirmation.
+# Keep both language versions together. Award order below is intentional.
+name:
+  en: Tian-Shi Xie
+  zh: 谢天石
+avatar: /images/portrait.jpg
+email: xietianshi123@gmail.com
+github: https://github.com/StoneXieAC
+codeforces: https://codeforces.com/profile/StoneXie
+
+summary:
+  en: |-
+    I'm a Software Engineering (FinTech Track) undergraduate at Northeastern University, China. I qualified for the 50th ICPC World Finals, served as captain of the NEU ACM Team, and worked as a Quantitative Research Intern at Nonconvex Intelligent Technology.
+  zh: |-
+    我是东北大学软件工程专业（金融科技特色方向）的本科生。在校期间，我曾担任东北大学 ACM 队队长并成功晋级第 50 届 ICPC 全球总决赛，此外还在非凸科技有过一段量化研究实习经历。
+
+affiliation:
+  en: Northeastern University, China
+  zh: 东北大学
+school:
+  en: School of Software
+  zh: 软件学院
+
+education:
+  - id: nju
+    institution:
+      en: Nanjing University
+      zh: 南京大学
+    school:
+      en: School of Artificial Intelligence, LAMDA
+      zh: 人工智能学院 LAMDA
+    qualification:
+      en: Offered admission to the master's program in Computer Science and Technology
+      zh: 计算机科学与技术硕士拟录取
+    date:
+      en: "Expected enrollment: September 2027"
+      zh: 预计 2027 年 9 月入学
+  - id: neu
+    institution:
+      en: Northeastern University, China
+      zh: 东北大学
+    school:
+      en: School of Software
+      zh: 软件学院
+    qualification:
+      en: B.Eng. in Software Engineering (FinTech Track)
+      zh: 软件工程（金融科技特色方向）本科
+    date:
+      en: September 2023–June 2027 (expected)
+      zh: 2023.09–2027.06（预计毕业）
+
+awards:
+  - id: ecfinal
+    emoji: 🥇
+    date: "2026.02"
+    name:
+      en: The 50th ICPC Asia East Final
+      zh: 第 50 届 ICPC 东亚区总决赛
+    result:
+      en: Gold Medal
+      zh: 金牌
+    detail:
+      en: Qualified for the ICPC World Finals
+      zh: 晋级世界总决赛
+  - id: ccpc-zhengzhou
+    emoji: 🏆
+    date: "2025.11"
+    name:
+      en: The 11th CCPC (Zhengzhou)
+      zh: 第十一届 CCPC 国赛郑州站
+    result:
+      en: 3rd Place
+      zh: 季军
+  - id: icpc-xian
+    emoji: 🏆
+    date: "2025.05"
+    name:
+      en: The 50th ICPC Invitational Contest (Xi’an)
+      zh: 第 50 届 ICPC 邀请赛西安站
+    result:
+      en: Champion
+      zh: 冠军
+  - id: northeast
+    emoji: 🏆
+    date: "2026.05"
+    name:
+      en: The 20th Northeast Collegiate Programming Contest
+      zh: 第二十届东北地区大学生程序设计竞赛
+    result:
+      en: Champion
+      zh: 冠军
+
+internship:
+  organization:
+    en: Nonconvex Intelligent Technology
+    zh: 上海非凸智能科技有限公司
+  role:
+    en: Quantitative Research Intern
+    zh: 量化研究实习生
+  date:
+    en: January–April 2026
+    zh: 2026.01–2026.04
+
+leadership:
+  organization:
+    en: Northeastern University ACM Team
+    zh: 东北大学 ACM 集训队
+  role:
+    en: Captain
+    zh: 队长
+  date:
+    en: September 2024–September 2026
+    zh: 2024.09–2026.09
+  description:
+    en: Organized team selection, training, and on-campus programming contests.
+    zh: 组织队员选拔、训练与校内竞赛。

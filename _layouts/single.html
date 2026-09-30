@@ -1,0 +1,62 @@
+---
+layout: default
+---
+{% assign profile = site.data.profile %}
+{% assign lang = page.lang %}
+{% assign ui = site.data.ui[lang] %}
+<div class="academic-layout">
+  {% include author-profile.html %}
+  <main id="content" class="academic-content" tabindex="-1">
+    <section id="about" class="profile-section introduction" aria-labelledby="about-title">
+      <h1 id="about-title">{{ ui.about }}</h1>
+      <div class="intro-text">{{ profile.summary[lang] | markdownify }}</div>
+    </section>
+
+    <section id="education" class="profile-section" aria-labelledby="education-title">
+      <h2 id="education-title">{{ ui.education }}</h2>
+      <div class="education-list">
+        {% for entry in profile.education %}
+        <article class="education-entry">
+          <h3>{{ entry.institution[lang] }}</h3>
+          <p class="entry-school">{{ entry.school[lang] }}</p>
+          <p class="entry-qualification">{{ entry.qualification[lang] }}</p>
+          <p class="entry-date">{{ entry.date[lang] }}</p>
+        </article>
+        {% endfor %}
+      </div>
+    </section>
+
+    <section id="honors" class="profile-section" aria-labelledby="honors-title">
+      <h2 id="honors-title">{{ ui.honors }}</h2>
+      <ul class="honors-list">
+        {% for award in profile.awards %}
+        <li class="honor-entry" data-award="{{ award.id }}">
+          <time datetime="{{ award.date | replace: '.', '-' }}">{{ award.date }}</time>
+          <div class="honor-content">
+            <h3>{{ award.name[lang] }}</h3>
+            <p class="honor-result">{% if award.emoji %}<span aria-hidden="true">{{ award.emoji }}</span> {% endif %}{{ award.result[lang] }}{% if award.detail %}{% if lang == 'zh' %}，{% else %}, {% endif %}{{ award.detail[lang] }}{% endif %}</p>
+          </div>
+        </li>
+        {% endfor %}
+      </ul>
+    </section>
+
+    <section id="experience" class="profile-section" aria-labelledby="experience-title">
+      <h2 id="experience-title">{{ ui.experience }}</h2>
+      <article class="experience-entry">
+        <p class="entry-category">{{ ui.internship }}</p>
+        <h3>{{ profile.internship.organization[lang] }}</h3>
+        <p class="entry-role">{{ profile.internship.role[lang] }}</p>
+        <p class="entry-date">{{ profile.internship.date[lang] }}</p>
+      </article>
+      <article class="experience-entry">
+        <p class="entry-category">{{ ui.leadership }}</p>
+        <h3>{{ profile.leadership.organization[lang] }}</h3>
+        <p class="entry-role">{{ profile.leadership.role[lang] }}</p>
+        <p class="entry-date">{{ profile.leadership.date[lang] }}</p>
+        <p class="entry-description">{{ profile.leadership.description[lang] }}</p>
+      </article>
+    </section>
+    {{ content }}
+  </main>
+</div>

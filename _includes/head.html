@@ -1,0 +1,23 @@
+{% assign lang = page.lang | default: 'en' %}
+{% assign ui = site.data.ui[lang] %}
+{% assign profile = site.data.profile %}
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{% if page.not_found %}{{ ui.not_found }} | {{ ui.title }}{% else %}{{ ui.page_title }}{% endif %}</title>
+<meta name="description" content="{{ profile.summary[lang] | escape }}">
+<meta name="color-scheme" content="light">
+<meta name="theme-color" content="#ffffff">
+<link rel="canonical" href="{{ page.url | absolute_url }}">
+{% unless page.not_found %}
+<link rel="alternate" hreflang="en" href="{{ '/' | absolute_url }}">
+<link rel="alternate" hreflang="zh-CN" href="{{ '/zh/' | absolute_url }}">
+<link rel="alternate" hreflang="x-default" href="{{ '/' | absolute_url }}">
+{% endunless %}
+{% if page.not_found %}<meta name="robots" content="noindex">{% endif %}
+<meta property="og:type" content="website">
+<meta property="og:title" content="{{ ui.page_title | escape }}">
+<meta property="og:description" content="{{ profile.summary[lang] | escape }}">
+<meta property="og:url" content="{{ page.url | absolute_url }}">
+<meta property="og:locale" content="{{ ui.og_locale }}">
+<link rel="icon" href="{{ '/assets/favicon.svg' | relative_url }}?v=2" type="image/svg+xml">
+<link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">

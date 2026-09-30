@@ -1,0 +1,191 @@
+/* Personal site overrides; Academic Pages is imported first. */
+:root {
+  --global-text-color: #303740;
+  --global-text-color-light: #626c76;
+  --global-link-color: #245a81;
+  --global-link-color-hover: #153d5a;
+  --global-border-color: #e5e9ed;
+  --academic-heading: #202b35;
+}
+html { font-size: 17px; scroll-padding-top: 104px; }
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  padding: 0;
+  font-family: "Times New Roman", "SimSun", "Songti SC", "STSong", serif;
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+}
+a {
+  color: var(--global-link-color);
+  text-underline-offset: 4px;
+  transition: color 0.15s ease;
+  &:visited { color: var(--global-link-color); }
+  &:hover { color: var(--global-link-color-hover); }
+  &:focus-visible { outline: 2px solid var(--global-link-color); outline-offset: 5px; border-radius: 2px; }
+}
+p { margin-top: 0; }
+h1, h2, h3, h4, h5, h6 { font-family: inherit; }
+.skip-link {
+  position: fixed; top: -100px; left: 16px; z-index: 100;
+  padding: 8px 16px; border: 1px solid var(--global-link-color); background: #fff;
+  &:focus { top: 10px; }
+}
+.academic-masthead {
+  position: sticky; top: 0; z-index: 20;
+  border-bottom: 1px solid var(--global-border-color);
+  background: rgba(255, 255, 255, 0.97);
+}
+.masthead-inner, .academic-layout, .footer-inner {
+  width: min(1120px, calc(100% - 80px)); margin-inline: auto;
+}
+.masthead-inner { display: flex; min-height: 76px; align-items: center; gap: 34px; }
+.site-name {
+  margin-right: auto; color: var(--academic-heading); font-size: 1.12rem;
+  font-weight: 650; letter-spacing: -0.025em; text-decoration: none;
+  &:visited { color: var(--academic-heading); }
+}
+.section-nav {
+  display: flex; flex-wrap: wrap; gap: 26px; font-size: 0.86rem;
+  a {
+    padding-block: 8px; color: #505b65;
+    &:visited { color: #505b65; }
+    &:hover { color: var(--global-link-color); }
+  }
+}
+.language-nav {
+  display: flex; flex-shrink: 0; align-items: center; gap: 9px;
+  padding-left: 26px; border-left: 1px solid var(--global-border-color); font-size: 0.78rem;
+  a {
+    padding-block: 8px; color: #626c76;
+    &:visited { color: #626c76; }
+    &[aria-current] { color: var(--global-link-color); font-weight: 650; }
+    &:hover { text-decoration: underline; }
+  }
+  span { color: #a5adb5; }
+}
+.academic-layout {
+  display: grid; flex: 1; grid-template-columns: 216px minmax(0, 1fr);
+  align-items: start; gap: 76px; padding-block: 54px 76px;
+}
+.academic-sidebar { position: sticky; top: 118px; min-width: 0; }
+.profile-portrait { display: block; width: 146px; height: auto; border: 1px solid #edf0f2; border-radius: 5px; }
+.profile-name {
+  margin: 22px 0 0; color: var(--academic-heading); font-size: 1.4rem;
+  font-weight: 650; letter-spacing: -0.035em; line-height: 1.4;
+}
+.profile-other-name { margin: 3px 0 19px; color: #626c76; font-size: 0.91rem; }
+.profile-affiliation { margin: 0 0 22px; font-size: 0.82rem; line-height: 1.8; }
+.profile-links {
+  display: grid; gap: 9px; font-size: 0.82rem;
+  a {
+    display: flex; width: fit-content; align-items: center; gap: 10px; padding-block: 2px;
+    &:hover span { text-decoration: underline; }
+  }
+}
+.profile-icon { flex-shrink: 0; }
+.academic-content { min-width: 0; outline: none; }
+.profile-section {
+  margin: 0 0 38px; scroll-margin-top: 16px;
+  &:last-of-type { margin-bottom: 0; }
+  h1, h2, h3 { color: var(--academic-heading); }
+  h1 { margin: -6px 0 19px; font-size: 1.8rem; font-weight: 650; letter-spacing: -0.04em; line-height: 1.5; }
+  h2 {
+    margin: 0 0 23px; padding-bottom: 10px; border-bottom: 1px solid var(--global-border-color);
+    font-size: 1.25rem; font-weight: 650; letter-spacing: -0.025em; line-height: 1.5;
+  }
+  h3 { margin: 0; font-size: 0.98rem; font-weight: 600; line-height: 1.65; }
+}
+.intro-text { max-width: 720px; margin: 0; font-size: 1rem; line-height: 1.85; }
+.intro-text p { margin: 0; }
+.intro-text p + p { margin-top: 1em; }
+.education-entry {
+  position: relative; padding-left: 20px; border-left: 2px solid #e5edf3;
+  & + & { margin-top: 26px; }
+  p { margin: 2px 0 0; font-size: 0.9rem; }
+  .entry-school { color: #626c76; }
+  .entry-qualification { margin-top: 7px; }
+}
+.entry-date { color: #626c76; font-size: 0.79rem; font-variant-numeric: tabular-nums; }
+.education-entry .entry-date { margin-top: 7px; font-size: 0.79rem; }
+.honors-list { margin: 0; padding: 0; list-style: none; }
+.honor-entry {
+  display: grid; grid-template-columns: 72px minmax(0, 1fr); gap: 18px;
+  margin: 0; padding-block: 15px; border-bottom: 1px solid #f0f2f4;
+  &:first-child { padding-top: 0; }
+  &:last-child { padding-bottom: 0; border-bottom: none; }
+  time { padding-top: 3px; color: #626c76; font-size: 0.79rem; font-variant-numeric: tabular-nums; }
+  h3 { font-size: 0.92rem; font-weight: 500; }
+  p { margin: 3px 0 0; font-size: 0.86rem; }
+  .honor-result { color: #245a81; font-weight: 600; }
+}
+.experience-entry {
+  & + & { margin-top: 28px; }
+  p { margin: 3px 0 0; }
+  .entry-category { margin: 0 0 8px; color: #626c76; font-size: 0.73rem; font-weight: 500; letter-spacing: 0.07em; text-transform: uppercase; }
+  .entry-role, .entry-description { font-size: 0.9rem; }
+  .entry-description { margin-top: 9px; }
+}
+.academic-footer { border-top: 1px solid var(--global-border-color); background: #fafbfc; }
+.footer-inner {
+  display: flex; align-items: center; justify-content: space-between; gap: 12px;
+  padding-block: 23px; color: #626c76; font-size: 0.72rem;
+  p { margin: 0; }
+  a { color: inherit; text-decoration: none; &:visited { color: inherit; } &:hover { text-decoration: underline; } }
+}
+.footer-separator { margin-inline: 8px; }
+.error-content { width: min(800px, calc(100% - 48px)); flex: 1; margin: 64px auto; }
+.error-code { color: #245a81; font-size: 3rem; margin-bottom: 12px; }
+html[lang="zh-CN"] {
+  .profile-name { letter-spacing: 0.06em; }
+  .profile-section h1, .profile-section h2 { letter-spacing: 0.02em; }
+}
+@media (max-width: 1000px) {
+  .academic-layout { grid-template-columns: 190px minmax(0, 1fr); gap: 46px; }
+  .masthead-inner { gap: 24px; }
+  .section-nav { gap: 18px; }
+  .language-nav { padding-left: 18px; }
+}
+@media (max-width: 760px) {
+  html { font-size: 16px; scroll-padding-top: 130px; }
+  .masthead-inner, .academic-layout, .footer-inner { width: calc(100% - 40px); }
+  .masthead-inner { min-height: auto; flex-wrap: wrap; gap: 0; padding-top: 15px; }
+  .site-name { order: 0; }
+  .language-nav { order: 1; padding-left: 0; border: 0; }
+  .section-nav { order: 2; width: 100%; justify-content: space-between; gap: 6px; padding-block: 9px 5px; font-size: 0.8rem; }
+  .academic-layout { grid-template-columns: minmax(0, 1fr); gap: 34px; padding-block: 30px 48px; }
+  .academic-sidebar { display: flex; position: static; align-items: flex-start; gap: 23px; }
+  .profile-portrait { width: 100px; flex: 0 0 100px; }
+  .profile-name { margin-top: 0; font-size: 1.3rem; }
+  .profile-other-name { margin-bottom: 9px; font-size: 0.85rem; }
+  .profile-affiliation { margin-bottom: 10px; font-size: 0.79rem; }
+  .profile-links { display: flex; flex-wrap: wrap; gap: 6px 15px; font-size: 0.79rem; }
+  .profile-links a { gap: 5px; }
+  .profile-icon { width: 15px; height: 15px; }
+  .profile-section { margin-bottom: 31px; }
+  .profile-section h1 { margin-top: 0; font-size: 1.6rem; }
+  .profile-section h2 { margin-bottom: 21px; }
+  .education-entry { padding-left: 15px; }
+  .honor-entry { grid-template-columns: 60px minmax(0, 1fr); gap: 11px; }
+  .footer-inner { flex-wrap: wrap; gap: 5px; padding-block: 18px; }
+}
+@media (max-width: 360px) {
+  .masthead-inner, .academic-layout, .footer-inner { width: calc(100% - 32px); }
+  .academic-sidebar { gap: 17px; }
+  .profile-portrait { width: 85px; flex-basis: 85px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}
+@media print {
+  html { font-size: 11pt; }
+  body { display: block; }
+  .academic-masthead, .skip-link { display: none; }
+  .academic-layout { width: 100%; grid-template-columns: 150px minmax(0, 1fr); gap: 28px; padding: 0; }
+  .academic-sidebar { position: static; }
+  .profile-portrait { width: 110px; }
+  .profile-section { break-inside: avoid; }
+  .footer-inner { width: 100%; }
+}

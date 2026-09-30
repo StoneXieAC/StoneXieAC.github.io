@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="{{ site.data.ui[page.lang].html_lang }}">
+  <head>
+    {% include head.html %}
+  </head>
+  <body>
+    {% assign profile = site.data.profile %}
+    {% assign ui = site.data.ui[page.lang] %}
+    <a class="skip-link" href="#content">{{ ui.skip }}</a>
+    {% include masthead.html %}
+    {{ content }}
+    {% include footer.html %}
+  </body>
+</html>

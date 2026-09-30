@@ -1,0 +1,13 @@
+<aside class="academic-sidebar" aria-label="{{ profile.name[lang] }}">
+  <img class="profile-portrait" src="{{ profile.avatar | relative_url }}" alt="{{ ui.portrait }}" width="235" height="353" fetchpriority="high">
+  <div class="profile-identity">
+    <p class="profile-name">{{ profile.name[lang] }}</p>
+    <p class="profile-other-name" lang="{% if lang == 'en' %}zh-CN{% else %}en{% endif %}">{% if lang == 'en' %}{{ profile.name.zh }}{% else %}{{ profile.name.en }}{% endif %}</p>
+    <p class="profile-affiliation">{{ profile.school[lang] }}<br>{{ profile.affiliation[lang] }}</p>
+    <nav class="profile-links" aria-label="{{ ui.contact }}">
+      <a href="mailto:{{ profile.email }}">{% include icon.html name='email' %}<span>{{ ui.email }}</span></a>
+      <a href="{{ profile.github }}">{% include icon.html name='github' %}<span>GitHub</span></a>
+      <a href="{{ profile.codeforces }}">{% include icon.html name='codeforces' %}<span>Codeforces</span></a>
+    </nav>
+  </div>
+</aside>

@@ -1,0 +1,16 @@
+<header class="academic-masthead">
+  <div class="masthead-inner">
+    <a class="site-name" href="{{ ui.home | relative_url }}">{{ profile.name[page.lang] }}</a>
+    <nav class="section-nav" aria-label="{{ ui.navigation }}">
+      <a href="{{ ui.home | relative_url }}#about">{{ ui.about }}</a>
+      <a href="{{ ui.home | relative_url }}#education">{{ ui.education }}</a>
+      <a href="{{ ui.home | relative_url }}#honors">{{ ui.honors }}</a>
+      <a href="{{ ui.home | relative_url }}#experience">{{ ui.experience }}</a>
+    </nav>
+    <nav class="language-nav" aria-label="{{ ui.languages }}">
+      <a href="{{ '/' | relative_url }}" lang="en" hreflang="en"{% if page.lang == 'en' and page.not_found != true %} aria-current="page"{% endif %}>EN</a>
+      <span aria-hidden="true">/</span>
+      <a href="{{ '/zh/' | relative_url }}" lang="zh-CN" hreflang="zh-CN"{% if page.lang == 'zh' %} aria-current="page"{% endif %}>中文</a>
+    </nav>
+  </div>
+</header>
