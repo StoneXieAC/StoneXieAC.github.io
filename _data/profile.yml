@@ -54,7 +54,7 @@ awards:
     emoji: 🥇
     date: "2026.02"
     name:
-      en: The 50th ICPC Asia East Final
+      en: The 50th ICPC Asia East Continent Final Contest
       zh: 第 50 届 ICPC 东亚区总决赛
     result:
       en: Gold Medal
@@ -66,7 +66,7 @@ awards:
     emoji: 🏆
     date: "2025.11"
     name:
-      en: The 11th CCPC (Zhengzhou)
+      en: The 11th CCPC Zhengzhou Site
       zh: 第十一届 CCPC 国赛郑州站
     result:
       en: 3rd Place
@@ -75,8 +75,8 @@ awards:
     emoji: 🏆
     date: "2025.05"
     name:
-      en: The 50th ICPC Invitational Contest (Xi’an)
-      zh: 第 50 届 ICPC 邀请赛西安站
+      en: The 50th ICPC Xi'an National Invitational Contest
+      zh: 第 50 届 ICPC 全国邀请赛西安站
     result:
       en: Champion
       zh: 冠军
